@@ -48,7 +48,6 @@ use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
-
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
 To do addition, use your sum() function, and to do multiplication, use your multiply() 
 function that you've already created. You're going to have to be resourceful to figure out 
@@ -56,7 +55,13 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const D = sum(a, b)[0];
+    const E = sum(D, c)[0];
+    const mulF = multiply(a, b)[0];
+    const mulG = multiply(mulF, c)[0];
+    const str1 = `${a} and ${b} and ${c} sum to ${E}.`;
+    const str2 = `The product of ${a} and ${b} and ${c} is ${mulG}.`;
+    return [E, mulG, str1, str2];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
