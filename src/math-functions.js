@@ -140,8 +140,8 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    let finalArray = 120;
-    for(let i = 0; i > dynamicArray.length;) {
+    let finalArray = 1;
+    for(let i = 0; i < dynamicArray.length; i++) {
         finalArray = multiply(finalArray, dynamicArray[i])[0];  
     }
     const str = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${finalArray}.`;
